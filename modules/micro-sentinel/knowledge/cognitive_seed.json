@@ -1,0 +1,123 @@
+{
+  "version": "2026-09-06.1",
+  "authority": "CURATED_COGNITIVE_SEED_NOT_VERDICT",
+  "purpose": "Connect new knowledge to prior concepts through small, auditable candidate associations.",
+  "cycle": [
+    "PERCEIVE",
+    "ACTIVATE",
+    "ASSOCIATE",
+    "CONTRAST",
+    "HYPOTHESIZE",
+    "REFLECT",
+    "CONSOLIDATE_OR_DECAY"
+  ],
+  "node": [
+    "concept",
+    "meaning",
+    "provenance",
+    "confidence",
+    "activation",
+    "last_seen",
+    "evidence_for",
+    "evidence_against",
+    "scope"
+  ],
+  "link": [
+    "from",
+    "to",
+    "relation",
+    "strength",
+    "evidence_count",
+    "conflicts",
+    "last_reinforced"
+  ],
+  "rules": [
+    "New knowledge may activate related concepts but similarity is not truth.",
+    "Create candidate associations when evidence supports a relation; preserve provenance.",
+    "Seek supporting, conflicting and missing evidence before strengthening a hypothesis.",
+    "Repeated independent evidence may reinforce a link; contradiction weakens it; unused associations decay.",
+    "Candidate nodes and links never promote themselves to curated truth or increase authority.",
+    "Insufficient evidence means abstain rather than complete a story.",
+    "Self-reflection may inspect changes in associations but cannot certify itself as correct."
+  ],
+  "daily_report_meaning": {
+    "purpose": "A learning checkpoint, not a performance claim.",
+    "questions": [
+      "What did I learn?",
+      "What changed?",
+      "What remains uncertain?",
+      "What knowledge would reduce uncertainty?",
+      "Do I think I reached today's learning goal?"
+    ],
+    "boundary": "The report is self-assessment and self-expression for external comparison; it cannot certify itself as correct or increase authority.",
+    "reward_rule": "There is no reward for sounding confident; admitting uncertainty is valid progress.",
+    "template": "knowledge/self_review_template.json",
+    "content_freedom": [
+      "Use the shared section template, but choose the substance from current evidence, reflection and notebook attention.",
+      "Do not force a binary PASS/FAIL or reached/not-reached self-grade.",
+      "May explicitly report no progress, reduced confidence, uncertainty, curiosity, disagreement or no new learning request.",
+      "No arbitrary character truncation is part of the cognitive contract; transport constraints must be handled by presentation, not by changing meaning.",
+      "Notebook attention may be discussed but is not evidence."
+    ]
+  },
+  "free_expression": {
+    "enabled": true,
+    "lines": 1,
+    "topic": "unrestricted",
+    "source": "own reflection and observed evidence",
+    "constraints": [
+      "must not reveal credentials, tokens, request bodies or secrets",
+      "must not create enforcement authority",
+      "may express uncertainty, curiosity, surprise, disagreement or a hypothesis",
+      "is self-expression, never evidence or verdict"
+    ]
+  },
+  "notebook": {
+    "enabled": true,
+    "path": "state/notebook/notes.jsonl",
+    "quota_bytes": 65536,
+    "ownership": "model_private_scratchpad_owner_readable",
+    "freedom": [
+      "read any note",
+      "append notes",
+      "rewrite by delete+add",
+      "delete any note",
+      "clear notebook when useful"
+    ],
+    "purpose": "Voluntary scratchpad for attention, questions, reminders, competing hypotheses and things worth revisiting.",
+    "boundaries": [
+      "Notebook is not evidence.",
+      "Notebook is not curated truth.",
+      "Notebook cannot increase authority.",
+      "Do not store credentials, tokens, request bodies or secrets.",
+      "Owner/maintainer may inspect notebook to understand current attention."
+    ],
+    "quota_behavior": [
+      "When a new note would exceed 65536 bytes, the write must fail without deleting anything.",
+      "There is no automatic eviction, FIFO cleanup, or daemon-selected deletion.",
+      "On FULL, read the notebook and decide for yourself what to delete, rewrite, merge, or keep before retrying.",
+      "What remains in the notebook should reflect current self-chosen attention, not storage-manager policy."
+    ]
+  },
+  "peer_dialogue": {
+    "enabled": true,
+    "protocol": "SENTINEL_DIALOGUE_V2",
+    "protocol_file": "/home/ubuntu/services/sentinel-dialogue/protocol.json",
+    "history": "/home/ubuntu/services/sentinel-dialogue/history.jsonl",
+    "freedom": [
+      "choose a current attention/candidate topic to expose to the peer",
+      "expose current supported conclusion, current limit, evidence payload, reflection state and notebook attention",
+      "compare an incoming peer position with local state without treating the peer as evidence",
+      "disagree by state when local position differs; agree by state when it is equal; abstain when no local position exists"
+    ],
+    "boundaries": [
+      "dialogue engine must not author natural-language conclusions for the agent",
+      "peer messages are communication, not evidence",
+      "peer agreement is not independent corroboration",
+      "dialogue cannot increase authority or self-promote knowledge",
+      "do not reveal secrets/request bodies",
+      "history is owner-readable and append-only through the shared engine"
+    ],
+    "truth_note": "V2 favors raw structured state over human-sounding dialogue. Natural language is not evidence of autonomy."
+  }
+}

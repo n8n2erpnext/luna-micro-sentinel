@@ -1,0 +1,19 @@
+{
+  "version": "2026-09-05.1",
+  "authority": "CURATED_DIAGNOSTIC_PRIOR",
+  "reasoning_patterns": [
+    {"symptom":"HTTP 502/504 rises","inspect":["reverse-proxy upstream health","service listener","route/reachability","latency/resource pressure"],"do_not_assume":"firewall attack or hostile client"},
+    {"symptom":"many HTTP paths from one source","inspect":["authenticated app navigation","route family","sensitive-target ratio","sequence/cadence","historical baseline"],"do_not_assume":"recon scan"},
+    {"symptom":"many sources target similar sensitive paths","inspect":["time correlation","target similarity","source dispersion","probe ratio","normal crawler possibility"],"do_not_assume":"one actor or DDoS"},
+    {"symptom":"high request rate","inspect":["baseline deviation","route concentration","source diversity","latency/timeouts","connection/resource pressure"],"do_not_assume":"DDoS"},
+    {"symptom":"connection failures","inspect":["listener","routing","firewall action","conntrack/resource limits","upstream health"],"do_not_assume":"application failure"},
+    {"symptom":"private/container source address","inspect":["proxy provenance","NAT","network namespace","overlay/container path"],"do_not_assume":"Internet attacker identity"}
+  ],
+  "layer_correlation": [
+    "L3 evidence answers reachability/source-network questions.",
+    "L4 evidence answers connection/transport questions.",
+    "L7 evidence answers request/application outcome questions.",
+    "Host resource evidence answers pressure/capacity questions.",
+    "Security-control evidence answers what a control decided, not objective attacker intent."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "day": "2026-09-05",
+  "role": "INDEPENDENT_RECOUNT",
+  "authority": "EVIDENCE_LEDGER",
+  "self_summary_trusted": false,
+  "observed": {
+    "events": 1471,
+    "sources": 147,
+    "subnets": 80,
+    "probe_events": 115,
+    "denied": 119,
+    "server_errors": 37
+  },
+  "evidence_sha256": "be26f377f38324b503ee163fd7e11ee031d163115dd1b65eb56103f3e4ccf494"
+}

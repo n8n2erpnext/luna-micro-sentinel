@@ -1,0 +1,288 @@
+{
+  "day": "2026-09-05",
+  "role": "SENTINEL_SELF_SUMMARY",
+  "authority": "HYPOTHESIS_ONLY",
+  "knowledge_hash": "4c8b558dfb9b8c85",
+  "observed": {
+    "events": 1471,
+    "sources": 147,
+    "subnets": 80,
+    "probe_events": 115,
+    "denied": 119,
+    "server_errors": 37
+  },
+  "previous_observed": null,
+  "learned_changes": [
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|POST|/distribution-api/api/app/event",
+      "count": 64,
+      "confidence": 0.832,
+      "evidence": {
+        "observations": 64
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/app.js",
+      "count": 27,
+      "confidence": 0.735,
+      "evidence": {
+        "observations": 27
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/styles.css",
+      "count": 26,
+      "confidence": 0.73,
+      "evidence": {
+        "observations": 26
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/admin.css",
+      "count": 26,
+      "confidence": 0.73,
+      "evidence": {
+        "observations": 26
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/docs.css",
+      "count": 26,
+      "confidence": 0.73,
+      "evidence": {
+        "observations": 26
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/hero-demo.js",
+      "count": 25,
+      "confidence": 0.726,
+      "evidence": {
+        "observations": 25
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/account-security.js",
+      "count": 25,
+      "confidence": 0.726,
+      "evidence": {
+        "observations": 25
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/admin-security.js",
+      "count": 25,
+      "confidence": 0.726,
+      "evidence": {
+        "observations": 25
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/docs.js",
+      "count": 25,
+      "confidence": 0.726,
+      "evidence": {
+        "observations": 25
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/marketing-admin.js",
+      "count": 25,
+      "confidence": 0.726,
+      "evidence": {
+        "observations": 25
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/verification.js",
+      "count": 25,
+      "confidence": 0.726,
+      "evidence": {
+        "observations": 25
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/commerce-admin.js",
+      "count": 25,
+      "confidence": 0.726,
+      "evidence": {
+        "observations": 25
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/",
+      "count": 18,
+      "confidence": 0.69,
+      "evidence": {
+        "observations": 18
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/internal-releases/latest.json",
+      "count": 18,
+      "confidence": 0.69,
+      "evidence": {
+        "observations": 18
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-api/api/announcements",
+      "count": 18,
+      "confidence": 0.69,
+      "evidence": {
+        "observations": 18
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-api/api/v1/health",
+      "count": 18,
+      "confidence": 0.69,
+      "evidence": {
+        "observations": 18
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-api/api/v1/internal/diagnostics",
+      "count": 18,
+      "confidence": 0.69,
+      "evidence": {
+        "observations": 18
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/internal-releases/index.json",
+      "count": 17,
+      "confidence": 0.684,
+      "evidence": {
+        "observations": 17
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/screenshots/lightbi-multifile-executive.png",
+      "count": 14,
+      "confidence": 0.663,
+      "evidence": {
+        "observations": 14
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "thaiduy.digital|GET|/",
+      "count": 12,
+      "confidence": 0.646,
+      "evidence": {
+        "observations": 12
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi.thaiduy.digital|GET|/",
+      "count": 12,
+      "confidence": 0.646,
+      "evidence": {
+        "observations": 12
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/lightbi-generation.json",
+      "count": 11,
+      "confidence": 0.637,
+      "evidence": {
+        "observations": 11
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-api/api/intelligence-packs/latest",
+      "count": 10,
+      "confidence": 0.627,
+      "evidence": {
+        "observations": 10
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/screenshots/lightbi-deep-ba-step2.png",
+      "count": 10,
+      "confidence": 0.627,
+      "evidence": {
+        "observations": 10
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/screenshots/lightbi-deep-ba-step1.png",
+      "count": 10,
+      "confidence": 0.627,
+      "evidence": {
+        "observations": 10
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/screenshots/lightbi-advanced-mode.png",
+      "count": 10,
+      "confidence": 0.627,
+      "evidence": {
+        "observations": 10
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "thaiduy.digital|POST|/",
+      "count": 10,
+      "confidence": 0.627,
+      "evidence": {
+        "observations": 10
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/distribution-assets/logo.svg",
+      "count": 9,
+      "confidence": 0.616,
+      "evidence": {
+        "observations": 9
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/admin",
+      "count": 9,
+      "confidence": 0.616,
+      "evidence": {
+        "observations": 9
+      }
+    },
+    {
+      "pattern": "normal_request_baseline",
+      "scope": "lightbi-next.thaiduy.digital|GET|/api/docs",
+      "count": 9,
+      "confidence": 0.616,
+      "evidence": {
+        "observations": 9
+      }
+    }
+  ],
+  "reflection": "Patterns describe evidence-backed behavior; they do not establish attacker identity or intent."
+}

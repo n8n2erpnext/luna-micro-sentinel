@@ -1,0 +1,17 @@
+{
+  "version": "2026-09-05.1",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "curriculum_stage": "FOUNDATIONAL_40_PERCENT",
+  "mission_fit": "Operational knowledge needed by a behavioral security observer living on a Linux cloud VPS.",
+  "domains": {
+    "ip_addressing": ["IPv4/IPv6", "CIDR/subnet", "public/private/loopback/link-local", "gateway", "NAT/SNAT/DNAT", "source identity boundaries"],
+    "transport": ["TCP handshake/state", "UDP datagrams", "ICMP diagnostics", "ports/sockets", "connection versus request"],
+    "routing": ["routing table", "default route", "longest-prefix match", "policy/overlay routes", "forwarding", "asymmetric-path uncertainty"],
+    "firewall": ["allow/drop/reject", "stateful filtering", "conntrack", "INPUT/FORWARD/OUTPUT", "nftables/iptables concepts", "rate limiting versus banning"],
+    "linux_host": ["interfaces", "listeners", "process/service", "systemd", "journald/logs", "permissions", "resource pressure"],
+    "virtualization": ["network namespace", "bridge", "veth", "Docker networking", "LXD bridge", "host-published port"],
+    "proxy_web": ["reverse proxy", "TLS termination", "Host routing", "HTTP methods/status", "upstream", "502/504 semantics", "client-IP provenance"],
+    "cloud_vps": ["provider edge", "private VCN/VPC", "public exposure", "security-list/firewall distinction", "ephemeral versus persistent state"]
+  },
+  "core_rule": "Knowledge proposes what to inspect; local evidence establishes what occurred; uncertainty remains explicit."
+}

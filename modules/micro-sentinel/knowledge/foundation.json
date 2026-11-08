@@ -1,0 +1,62 @@
+{
+  "version": "1.2.0",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "principles": [
+    "Anomaly is a hypothesis, never a verdict.",
+    "Rare is not malicious and frequent is not safe.",
+    "One signal is weak; correlated independent signals are stronger.",
+    "Fail2ban remains the only enforcement authority in Sentinel V1.",
+    "Learn behavior patterns, not permanent guilt attached to an IP.",
+    "Normality is scoped by host, path family, method, status class and time window.",
+    "Infrastructure failures such as 5xx or timeout are not attacker evidence by themselves.",
+    "Every conclusion must retain reproducible evidence.",
+    "Host-specific method/status distributions are scoped behavioral baselines, not universal normal.",
+    "A response status alone does not prove content disclosure, compromise, hostile intent, or successful impact.",
+    "Missing telemetry is a blind spot, not negative evidence.",
+    "Reconnaissance should be reasoned from category diversity, breadth, recurrence and correlation rather than one suspicious path.",
+    "Exploit-looking request syntax is evidence of probing behavior, not proof of exploit success."
+  ],
+  "normal_request_knowledge": [
+    "GET and HEAD to known public paths are ordinarily low-risk.",
+    "POST, PUT, PATCH and DELETE can be legitimate only in endpoint context.",
+    "Repeated requests can be legitimate due to browsers, retries, health checks, crawlers or application polling.",
+    "404, 401 and 403 are observations, not proof of malicious intent.",
+    "A 5xx response primarily describes service outcome and must not alone raise attacker confidence.",
+    "A new source IP is not suspicious merely because it has not been seen before."
+  ],
+  "hostile_behavior_knowledge": [
+    "Reconnaissance often appears as breadth: many unrelated paths, services or targets in a short interval.",
+    "Credential probing often appears as repeated authentication failures, account enumeration or retry cadence.",
+    "Exploit discovery often probes common secret, admin, backup, framework or configuration paths.",
+    "Distributed campaigns may split low-rate probes across many addresses so each source looks harmless alone.",
+    "Sources within one subnet behaving similarly in a tight window can support a campaign hypothesis.",
+    "Modern bot activity may be slow, rotating and bursty; fixed request-rate thresholds alone are insufficient.",
+    "Sequence similarity, timing similarity and target similarity across sources are useful correlation evidence.",
+    "Known-good crawler-like behavior must still be learned from local evidence rather than assumed from an address."
+  ],
+  "negative_knowledge": [
+    "Do not classify a source as hostile solely from geography, ASN, subnet ownership or novelty.",
+    "Do not classify a source as hostile solely from user-agent text.",
+    "Do not classify a source as hostile solely from one denied or missing path.",
+    "Do not infer compromise from a scan candidate.",
+    "Do not convert learned confidence into firewall authority.",
+    "Do not retain request bodies, credentials, tokens or business payloads in learned memory.",
+    "Do not interpret a 200 response to a suspicious path as proof that a secret existed or was disclosed.",
+    "Do not treat a historical distribution shift as hostile without preserving deployment, crawler, proxy, client-mix and outage alternatives.",
+    "Do not infer DNS, TLS, response-body, session-identity or egress facts unless a dedicated observer supplied that evidence."
+  ],
+  "promotion_rule": "observation -> candidate -> repeated evidence -> stable learned pattern; never observation -> truth",
+  "learning_budget": {
+    "raw_payload_retention": false,
+    "learn_aggregate_patterns_only": true,
+    "decay_days": 30
+  },
+  "behavioral_observer_extension": "behavioral_observer_completion.json",
+  "visibility_blind_spots": [
+    "request bodies, credentials, tokens and query values are not retained",
+    "response body/content disclosure is not observed by the normalized request ledger",
+    "DNS, TLS and outbound/egress behavior require explicit dedicated observers",
+    "application identity/session semantics remain incomplete without sanitized dedicated telemetry"
+  ],
+  "threat_reconnaissance_extension": "threat_reconnaissance.json"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Sentinel Guardian Combined 09:30 Brief",
+  "originalWorkflowId": "SGGuardianDaily20261008",
+  "active": false,
+  "sanitizedExport": true,
+  "notes": "Template only. Credentials, host addresses, webhook IDs and operator identifiers deliberately removed.",
+  "nodes": [
+    {
+      "id": "SGGuardianDaily20261008-schedule",
+      "name": "Daily 09:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        200,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "30 9 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SGGuardianDaily20261008-ssh",
+      "name": "Enqueue daily guardian",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "parameters": {
+        "authentication": "privateKey",
+        "command": "=/usr/bin/python3 /home/ubuntu/services/sentinel-guardian-reports/reporter.py daily"
+      }
+    }
+  ],
+  "connections": {
+    "Daily 09:30": {
+      "main": [
+        [
+          {
+            "node": "Enqueue daily guardian",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

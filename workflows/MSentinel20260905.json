@@ -1,0 +1,149 @@
+{
+  "name": "Micro Sentinel",
+  "originalWorkflowId": "MSentinel20260905",
+  "active": false,
+  "sanitizedExport": true,
+  "notes": "Template only. Credentials, host addresses, webhook IDs and operator identifiers deliberately removed.",
+  "nodes": [
+    {
+      "id": "ms-telegram-trigger",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -420,
+        -120
+      ],
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      }
+    },
+    {
+      "id": "ms-auth",
+      "name": "Authorized operator",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -200,
+        -120
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ms-owner",
+              "leftValue": "={{ $json.message.from.id }}",
+              "rightValue": "=7045467273",
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      }
+    },
+    {
+      "id": "ms-prepare",
+      "name": "Prepare Sentinel command",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        20,
+        -120
+      ],
+      "parameters": {
+        "jsCode": "const text=$json.message?.text??''; const chatId=$json.message?.from?.id; return [{json:{command_b64:Buffer.from(text,'utf8').toString('base64'),chat_id:chatId}}];"
+      }
+    },
+    {
+      "id": "ms-exec",
+      "name": "Execute Sentinel command",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -120
+      ],
+      "parameters": {
+        "authentication": "privateKey",
+        "command": "=printf '%s' '{{ $json.command_b64 }}' | base64 -d | /home/ubuntu/.local/bin/f2b-botctl sentinel-stdin"
+      }
+    },
+    {
+      "id": "ms-send",
+      "name": "Send Sentinel result",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        460,
+        -120
+      ],
+      "parameters": {
+        "chatId": "CONFIGURE_IN_N8N",
+        "text": "={{ $json.stdout }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Authorized operator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Authorized operator": {
+      "main": [
+        [
+          {
+            "node": "Prepare Sentinel command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Sentinel command": {
+      "main": [
+        [
+          {
+            "node": "Execute Sentinel command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Sentinel command": {
+      "main": [
+        [
+          {
+            "node": "Send Sentinel result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

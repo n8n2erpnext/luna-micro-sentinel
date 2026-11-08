@@ -1,0 +1,16 @@
+{
+  "version": "2026-09-05.1",
+  "mode": "ANOMALY_STREAM",
+  "max_messages_per_minute": 10,
+  "overflow": "QUEUE_NOT_DROP",
+  "abnormal_states": ["unusual_uncertain", "suspicious_pattern"],
+  "dedupe_identical_seconds": 15,
+  "normal_behavior_alerts": false,
+  "authority": "OBSERVE_ONLY",
+  "notes": [
+    "Every independently detected abnormal event may become a notification.",
+    "Rate limiting controls delivery only; it must not erase evidence.",
+    "Overflow remains queued for later delivery.",
+    "Alerting never grants enforcement authority."
+  ]
+}

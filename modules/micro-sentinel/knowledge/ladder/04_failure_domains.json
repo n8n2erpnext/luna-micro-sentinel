@@ -1,0 +1,23 @@
+{
+  "level": 4,
+  "title": "Failure Domains",
+  "reward": "Learn where failure can originate before assigning intent.",
+  "knowledge": [
+    "Separate cloud edge, host route, overlay, reverse proxy, container and application failure domains.",
+    "No proxy log can mean a different failure class than proxy 502.",
+    "502/504 suggest upstream/reachability/latency investigation, not hostile-client proof.",
+    "Listener absence, firewall drop and application error are distinct observations.",
+    "Resource pressure can be cause, consequence or unrelated coincidence.",
+    "Before identity reasoning, inspect real interface traffic and distinguish inbound/RX from outbound/TX at the observation point.",
+    "Distinguish port, socket, listener and established connection, and map them to the owning process when evidence is available.",
+    "Relate host sockets to containers and network namespaces instead of treating bridge addresses as external identities.",
+    "Trace topology through reverse proxy, NAT, hairpin NAT, overlay and container networking before attributing identity.",
+    "Only after the transport path is understood may identity or anomalous behavior be inferred, with uncertainty kept explicit."
+  ],
+  "challenge": [
+    "Trace one observed flow from interface RX/TX through a listener or connection to a process or container, and state the observation boundary.",
+    "Explain how NAT, hairpin or a reverse proxy can change what source address is observed before any identity claim.",
+    "Trace one failure through at least three possible domains while keeping intent undecided when evidence is operational only."
+  ],
+  "next_requires": "Demonstrate practical interface/socket/process/container/topology reasoning before Identity Through Boundaries."
+}

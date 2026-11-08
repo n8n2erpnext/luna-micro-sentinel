@@ -1,0 +1,38 @@
+{
+  "budget_version": "2026-10-08.owner-approved.guardian-v2",
+  "generation": 2,
+  "policy": "HARD_GATED_EVOLUTION",
+  "limits": {
+    "active_pattern_memory": 2000,
+    "memory_database_bytes": 1073741824,
+    "observations_retained": 3500000,
+    "knowledge_files_bytes": 67108864,
+    "history_rows": 250000
+  },
+  "warning_ratio": 0.85,
+  "hard_stop_ratio": 1.0,
+  "on_warning": "report capacity pressure without changing learning authority",
+  "on_limit": "freeze promotion and expansion, preserve evidence, request human approval for a governed evolution cycle",
+  "evolution_requires": [
+    "human approval",
+    "auditable pre-evolution snapshot",
+    "independent metrics baseline",
+    "review of accumulated evidence and conflicts",
+    "academic/technical grounding for algorithm changes",
+    "offline tune/retrain by maintainer",
+    "before/after regression evaluation",
+    "versioned migration and rollback point"
+  ],
+  "forbidden": [
+    "self-modify code",
+    "self-raise budget",
+    "self-promote authority",
+    "discard evidence to hide capacity pressure"
+  ],
+  "evolution_owner_approval": {
+    "date": "2026-10-08",
+    "approval": "owner explicitly permitted increasing 50MB pilot budget",
+    "event": "guardian capacity review",
+    "auto_enforcement": false
+  }
+}

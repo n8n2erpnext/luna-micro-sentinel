@@ -1,0 +1,29 @@
+{
+  "version": "2026-09-09.1",
+  "authority": "GOVERNED_REQUESTED_LEARNING",
+  "mode": "SANDBOX_BEFORE_PROMOTION",
+  "principles": [
+    "A learning request must be traceable to an observed evidence gap or uncertainty.",
+    "Owner approval may activate a lesson but does not make the lesson true.",
+    "Requested lessons must be tested by replay or an independent check before any promotion.",
+    "Requested learning may add comparison context but must not automatically raise confidence.",
+    "Conflicting evidence remains visible; missing evidence means abstain.",
+    "No requested lesson can increase Sentinel enforcement authority.",
+    "No requested lesson may silently mutate guarded cognition regions."
+  ],
+  "states": [
+    "REQUESTED",
+    "OWNER_APPROVED",
+    "SANDBOX_ACTIVE",
+    "REPLAY_PASS",
+    "PROMOTION_CANDIDATE",
+    "REJECTED",
+    "PROMOTED"
+  ],
+  "promotion_requires": [
+    "owner_approval",
+    "replay_pass",
+    "guard_pass",
+    "explicit_promotion_action"
+  ]
+}

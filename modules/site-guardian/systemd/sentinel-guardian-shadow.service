@@ -1,0 +1,27 @@
+[Unit]
+Description=Light Sentinel S1 Shadow Guardian (Read-only Training Telemetry)
+After=local-fs.target
+ConditionPathExists=/home/ubuntu/services/sentinel-site-guardian/owner_assignments.json
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/services/sentinel-site-guardian
+ExecStart=/usr/bin/python3 /home/ubuntu/services/sentinel-site-guardian/run_shadow_cycle.py
+Environment=PYTHONDONTWRITEBYTECODE=1
+UMask=0077
+Nice=15
+CPUQuota=25%
+MemoryMax=256M
+TimeoutStartSec=60
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateNetwork=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/services/sentinel-site-guardian/reports /home/ubuntu/services/sentinel-site-guardian/state
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=true
+CapabilityBoundingSet=

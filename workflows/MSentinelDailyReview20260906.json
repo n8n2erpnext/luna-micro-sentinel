@@ -1,0 +1,131 @@
+{
+  "name": "Luna & Selene Daily Self Review",
+  "originalWorkflowId": "MSentinelDailyReview20260906",
+  "active": false,
+  "sanitizedExport": true,
+  "notes": "Template only. Credentials, host addresses, webhook IDs and operator identifiers deliberately removed.",
+  "nodes": [
+    {
+      "id": "ms-review-schedule",
+      "name": "09:30 Daily",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -320,
+        0
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "30 9 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ms-review-a",
+      "name": "Luna self review",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        0
+      ],
+      "parameters": {
+        "authentication": "privateKey",
+        "command": "=/usr/bin/python3 /home/ubuntu/services/micro-sentinel/bin/sentinel_self_report.py"
+      }
+    },
+    {
+      "id": "ms-review-send-a",
+      "name": "Send Luna self review",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        160,
+        -80
+      ],
+      "parameters": {
+        "chatId": "CONFIGURE_IN_N8N",
+        "text": "={{ $json.stdout }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      }
+    },
+    {
+      "id": "ms-review-b",
+      "name": "Selene self review",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        160,
+        100
+      ],
+      "parameters": {
+        "authentication": "privateKey",
+        "command": "=/usr/bin/python3 /home/ubuntu/services/micro-sentinel-b/bin/sentinel_self_report.py"
+      }
+    },
+    {
+      "id": "ms-review-send-b",
+      "name": "Send Selene self review",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        400,
+        100
+      ],
+      "parameters": {
+        "chatId": "CONFIGURE_IN_N8N",
+        "text": "={{ $json.stdout }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "09:30 Daily": {
+      "main": [
+        [
+          {
+            "node": "Luna self review",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Selene self review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Luna self review": {
+      "main": [
+        [
+          {
+            "node": "Send Luna self review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Selene self review": {
+      "main": [
+        [
+          {
+            "node": "Send Selene self review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

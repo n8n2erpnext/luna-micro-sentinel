@@ -1,0 +1,22 @@
+{
+  "version": "2026-09-05.1",
+  "authority": "GOVERNED_LEARNING_METHOD",
+  "learning_loop": ["observe", "normalize", "place evidence in layer/context", "compare scoped baseline", "form candidate hypothesis", "seek supporting/conflicting evidence", "abstain or alert", "aggregate across time", "governed promotion"],
+  "questions_before_confidence": [
+    "Where in the topology was this evidence observed?",
+    "Which OSI/TCP-IP/application layer can this evidence actually speak about?",
+    "Could NAT, proxy, overlay or container networking alter apparent source/context?",
+    "What is normal for this host+route+method+time context?",
+    "What independent evidence supports the hypothesis?",
+    "What evidence conflicts with it?",
+    "Is service impact actually observed or merely inferred?",
+    "Is there enough history to call the pattern stable?"
+  ],
+  "promotion_rules": [
+    "Frequency cannot grant semantic authority.",
+    "Same-day reruns cannot count as new learning days.",
+    "Human correction creates evidence/candidate knowledge, not an unconditional whitelist or truth label.",
+    "New knowledge must retain source, scope, version and reviewability.",
+    "Capacity limits freeze expansion rather than silently deleting inconvenient evidence."
+  ]
+}

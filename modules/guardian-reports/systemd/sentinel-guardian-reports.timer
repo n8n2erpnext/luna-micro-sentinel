@@ -1,0 +1,12 @@
+[Unit]
+Description=Poll guarded site telemetry every two minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=2min
+AccuracySec=10s
+Persistent=true
+Unit=sentinel-guardian-reports.service
+
+[Install]
+WantedBy=timers.target

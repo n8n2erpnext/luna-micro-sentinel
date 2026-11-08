@@ -1,0 +1,26 @@
+{
+  "version": "2026-09-05.1",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "purpose": "Give Sentinel a compact mental model of network layers and traffic paths so observations are interpreted in infrastructure context.",
+  "models": {
+    "tcp_ip": ["link", "internet_ip", "transport_tcp_udp", "application"],
+    "osi_reference": ["L1 physical", "L2 data-link", "L3 network/IP", "L4 transport TCP/UDP", "L5 session", "L6 presentation", "L7 application"],
+    "security_planes": ["cloud_edge", "host_network", "overlay_network", "reverse_proxy", "container_network", "application", "observer_enforcement"]
+  },
+  "interpretation_rules": [
+    "A symptom observed at L7 does not by itself identify a cause at L3 or L4.",
+    "Source identity may be transformed by NAT, proxying or overlay routing; preserve the evidence source and trust boundary.",
+    "HTTP status describes an application/proxy outcome, not attacker intent.",
+    "TCP connection behavior, HTTP request behavior and application authentication behavior are different evidence classes.",
+    "Reverse-proxy logs describe traffic visible at the proxy boundary, not every packet reaching the host.",
+    "Container bridge addresses are internal topology and must not be interpreted as Internet attacker identity.",
+    "Overlay VPN addresses are a distinct trust/routing context, not ordinary public Internet addresses.",
+    "Correlate layers before escalating confidence; disagreement between layers increases uncertainty."
+  ],
+  "negative_knowledge": [
+    "Do not call a 404, 401, 403, 5xx or timeout a network attack by itself.",
+    "Do not infer DDoS solely from high HTTP request count.",
+    "Do not infer compromise from a scan candidate.",
+    "Do not infer one physical actor merely because sources share a subnet."
+  ]
+}

@@ -1,0 +1,20 @@
+# Runtime state, operational/secret data and generated files
+**/state/
+**/reports/
+**/logs/
+**/backups/
+**/backup/
+**/__pycache__/
+**/*.pyc
+**/*.sqlite*
+**/*.db
+**/*.db-*
+**/.env
+**/.env.*
+**/*credentials*
+**/*secret*
+**/*token*
+**/*.bak*
+**/*.pre-*
+.private-*/
+.tmp/

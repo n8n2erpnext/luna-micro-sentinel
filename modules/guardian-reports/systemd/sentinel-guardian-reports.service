@@ -1,0 +1,26 @@
+[Unit]
+Description=Sentinel Guardian monitored evidence and safe alert candidates (no bans)
+After=local-fs.target
+ConditionPathExists=/home/ubuntu/services/sentinel-guardian-reports/reporter.py
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/services/sentinel-guardian-reports
+ExecStart=/usr/bin/python3 /home/ubuntu/services/sentinel-guardian-reports/run_monitor.py
+UMask=0077
+Nice=16
+CPUQuota=30%
+MemoryMax=512M
+TimeoutStartSec=80
+NoNewPrivileges=true
+PrivateNetwork=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/services/sentinel-guardian-reports/state
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectControlGroups=true

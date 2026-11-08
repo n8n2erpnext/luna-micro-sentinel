@@ -1,0 +1,816 @@
+{
+  "generated": "2026-11-08",
+  "kind": "source-only snapshot",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 268,
+      "sha256": "5f6b2bd50d32e91585f17a03fb8554c03db3998310f7811ad6fdd8b3c700dccb"
+    },
+    {
+      "path": "README.md",
+      "size": 1781,
+      "sha256": "ef7b609abe1ee9877ed0b745c29713a79d2834d9cdd9e5550789737865077f2e"
+    },
+    {
+      "path": "docs/DECOMMISSION_HANDOFF.md",
+      "size": 1403,
+      "sha256": "4496b00cd66b3ddd4f0be6890ca5482ea91fcc6f634d8053b5009abca81e08d3"
+    },
+    {
+      "path": "modules/competition-reviews/2026-10-08-ENFORCEMENT-READINESS.md",
+      "size": 14717,
+      "sha256": "f45227bc3244a05b2811b2d3095af9d1bba4310cbff6ee89f6320be70d7bda25"
+    },
+    {
+      "path": "modules/competition-reviews/2026-10-08-enforce-readiness.py",
+      "size": 4251,
+      "sha256": "5a160bf403c4d6e160b5fbc20fc50556c64f12cd75a2dbf0667ac2a976ae7279"
+    },
+    {
+      "path": "modules/guardian-reports/HANDOFF_REPORTING_2026-10-08.md",
+      "size": 8100,
+      "sha256": "b9cb6e4591e2dc98226a6faff7efa808076958ded9ea9909ce4a764899dc2934"
+    },
+    {
+      "path": "modules/guardian-reports/asset_inventory.py",
+      "size": 4301,
+      "sha256": "5bb6347b144d9e33c0a1ad1ccde7406773a03e9d2227ff32f45338693a70e83a"
+    },
+    {
+      "path": "modules/guardian-reports/collect_evidence.py",
+      "size": 8143,
+      "sha256": "47e5c4528555f48e5cd860d4382c108bbfb1be18a42197bd5848040b73f62f37"
+    },
+    {
+      "path": "modules/guardian-reports/deployed_component_evidence.py",
+      "size": 6044,
+      "sha256": "375127578a10514442f2eecf2f9c8a352576ff875a003474f0a21e26916c3e42"
+    },
+    {
+      "path": "modules/guardian-reports/luna_crowdsec_bridge.py",
+      "size": 10027,
+      "sha256": "a7ec1dd1b35bc90a1ad261a4bce492df6af9df846ededb69f6a4ed575f95a0a0"
+    },
+    {
+      "path": "modules/guardian-reports/luna_firewall_v2.py",
+      "size": 16427,
+      "sha256": "1840f2fda7842dc0802ec88a07ad7151a4c20420a469e432441dc75fe607b11c"
+    },
+    {
+      "path": "modules/guardian-reports/reporter.py",
+      "size": 5301,
+      "sha256": "03a0f518c8fe0a58810ab5425764b9fabcb44eac46024eca30d868c23fbf5ef9"
+    },
+    {
+      "path": "modules/guardian-reports/run_monitor.py",
+      "size": 977,
+      "sha256": "57aba2385ed17967582772004d89a05f9e9042b9475d9f43df99df2feffbd805"
+    },
+    {
+      "path": "modules/guardian-reports/systemd/sentinel-guardian-assets.service",
+      "size": 548,
+      "sha256": "a14b8349f207f7b2fc64f417289c09e32db0cfc53c08ddb4e2285376ea3beea5"
+    },
+    {
+      "path": "modules/guardian-reports/systemd/sentinel-guardian-assets.timer",
+      "size": 210,
+      "sha256": "071c559412491094c97fb5e0cae46f46a537ec0ddae7db4eb0e77386f40505fd"
+    },
+    {
+      "path": "modules/guardian-reports/systemd/sentinel-guardian-reports.service",
+      "size": 764,
+      "sha256": "53620cde00f01e6bd8e76a1f9caef57d249e0ba88e45100a482cb9ef6240577d"
+    },
+    {
+      "path": "modules/guardian-reports/systemd/sentinel-guardian-reports.timer",
+      "size": 215,
+      "sha256": "e2fde87a8943e6c75ce3fe10ccd991a1ce05c70b68ff5a3c61898b26c13e880f"
+    },
+    {
+      "path": "modules/guardian-reports/test_decision_notifications.py",
+      "size": 2405,
+      "sha256": "9e2b55aefd1545f855bfed7f3a67630c750cfae73e167afe572a12952d350edf"
+    },
+    {
+      "path": "modules/guardian-reports/test_luna_crowdsec_bridge.py",
+      "size": 3092,
+      "sha256": "b9a8d8c6568829770d22b82fef015e7b9219f00c2b4e9feba0439506b642cd44"
+    },
+    {
+      "path": "modules/guardian-reports/test_luna_firewall_v2.py",
+      "size": 4325,
+      "sha256": "0927745807d6037eec1dc1afdc108b52629f125b3c112b68fd5d8789cc69b75b"
+    },
+    {
+      "path": "modules/guardian-reports/test_reporting.py",
+      "size": 1423,
+      "sha256": "e8cc7d17bb90bbcb83688b458a887e3132dcb3ccedaff5072c6ca4575d127f9c"
+    },
+    {
+      "path": "modules/luna-docs/CONTRIBUTING.md",
+      "size": 484,
+      "sha256": "cedf39cce2a9c18c4a7d601671c1ea7c467a206e56dd8852663274eb0392e2c3"
+    },
+    {
+      "path": "modules/luna-docs/README.md",
+      "size": 7216,
+      "sha256": "c17cd3e3ea3a834bc4290f87457dd6d96f688ea59c1eb1819dd575396e8d9399"
+    },
+    {
+      "path": "modules/luna-docs/SECURITY.md",
+      "size": 612,
+      "sha256": "9e6c5e98838dad786e1bdf1cb08f59243e011a1514e964840eef86d835c70ced"
+    },
+    {
+      "path": "modules/micro-sentinel/README.md",
+      "size": 1168,
+      "sha256": "fffa85aac14cca10813338c4b127f7cb7d3ffdfd0bf4d8936decb5542987b2cf"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/cognitive_bridge.py",
+      "size": 1363,
+      "sha256": "4e41a5d087d26862d15f056f2f1ff01b871561dd097a4eb7e79c1509cce135f3"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/crowdsec_reference_replay.py",
+      "size": 1591,
+      "sha256": "8b24b2dcd824d23f752db045d86a2bc3d1681da952faba0014579e95f697b4b2"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/log_cursor.py",
+      "size": 665,
+      "sha256": "5115bbe6158d2a180e0d58d4d45fad00dc70fbbd24e2155dd90c087d6fc977f2"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/network_observer.py",
+      "size": 2925,
+      "sha256": "3bffaee68eae115c2d4e1cdb482ad70743edadaba52d600692f0b86995882f37"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/network_reasoner.py",
+      "size": 4609,
+      "sha256": "28e4ac09da6ef261ad0d18d9633332a9b460e6ad15ced5248c1cbef1a22c279e"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/path_privacy.py",
+      "size": 586,
+      "sha256": "0a8fda5e976b350d728943c56af4a9d2f3457d12c00e94c826fcb33ea3fa24d0"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/request_understanding.py",
+      "size": 1543,
+      "sha256": "5c8212f4d259a0c65c4b3dbeca2394ccd71b2d28739be0001e29d0ec04c498c8"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/requested_learning.py",
+      "size": 2351,
+      "sha256": "73ef269074fa6d052a272932def29499578bc34fc41c4c7cf9267a3ed0a00fc2"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel.py",
+      "size": 3531,
+      "sha256": "9f3a9491cd54faf574d99947fbc3112220b8658812d341a211f58f55c259a82e"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_alerts.py",
+      "size": 4163,
+      "sha256": "81ef53840251917e0454da9b705709aa2cf80030f8f934def91b2a8845dcc983"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_behavioral_baseline.py",
+      "size": 3541,
+      "sha256": "a9cab241ce7234575b57c395d5aedc1ffa631ae354561cddbd3237f3ba91c30c"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_budget.py",
+      "size": 1549,
+      "sha256": "a58de5c0f7342b92c4e35af93fb3423cf72d783ee74d4c7d94cc9967e3be2f03"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_cycle.py",
+      "size": 1652,
+      "sha256": "9778414c0cc33b9eddc1b3ab393263c67f6c1724bea0d9cbfa1f521bd1d2be2c"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_evolution.py",
+      "size": 4456,
+      "sha256": "749bbb4ac8d4897817bce1589789c9a695593d28beceb4744d1c6a240d4450cc"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_guard.py",
+      "size": 2346,
+      "sha256": "03f84e1916f209565b857296bb2b78a6efac360dde917ba28d76ba55d78503b7"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_intelligence.py",
+      "size": 1294,
+      "sha256": "3dc03ba5edcadeb18e9639887197f9e7b17f07ebc9ee3c55e07f20f3a73ef53b"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_ladder.py",
+      "size": 3600,
+      "sha256": "1ab112f0ebf9634d9962b4a19051bf64d3e0484ae0a7f4adbaae996e63b86e97"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_memory.py",
+      "size": 3534,
+      "sha256": "400c1958ca8845c16ebb3e0b648b4f6ef720211199d619f2dece828a34e03246"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_memory_rebuild.py",
+      "size": 1832,
+      "sha256": "3ffce6e77b84273f5a975e578e6b2803a822e9f485f85461cfbfd8aa8947c060"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_notebook.py",
+      "size": 2214,
+      "sha256": "bc8d40efa40226e905631f2f5e9fe8038a176eb0664f26b03f4c7e413913eef0"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_notebook_attention.py",
+      "size": 3615,
+      "sha256": "e1167b05f9dd8f9251325ceccc3dfe373e0ae2dfc7370600ae10f6aa68a2e6e8"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_notebook_deliberate.py",
+      "size": 8199,
+      "sha256": "a4b06d189470143d361fa233245a4c16eef56fe6e0af916319d7d97e89d41021"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_operator.py",
+      "size": 695,
+      "sha256": "c8ed648bf963d3373184c0334afb1ad5fee9def9b5807cf1d47f46834ea06699"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_query.py",
+      "size": 4742,
+      "sha256": "cc43c358505a1a2cd66773e33e94592f51eba9a041829f43806a00c0630a040c"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_reflect.py",
+      "size": 8673,
+      "sha256": "38c7bea8de8de70bffd3c608f48de444878659dfc0d8fc95c081d6836bef8a1f"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_self_assessment.py",
+      "size": 3110,
+      "sha256": "2a0e56513956aca79c464d8dea412b0e1f491fe42367a1dde26a24d16479d84c"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_self_report.py",
+      "size": 4634,
+      "sha256": "56ae083d585339b0f7086e32662b46bc8a7739c24359852bd95d7a28140704eb"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_status.py",
+      "size": 1505,
+      "sha256": "dae310abcf10dafb2330cfc2c3177a075a186740c21687a16ac4b50398627de2"
+    },
+    {
+      "path": "modules/micro-sentinel/bin/sentinel_v2.py",
+      "size": 10730,
+      "sha256": "3c6b0d1372a20e35ad8a3396c241752d70f9b5c5b7953b8d3d7bcef84bb9a4d9"
+    },
+    {
+      "path": "modules/micro-sentinel/config/alert_policy.json",
+      "size": 562,
+      "sha256": "733092699384424ea52f7ab5e446407da71f39a5b9510fd5c8ab2d4f86273ffc"
+    },
+    {
+      "path": "modules/micro-sentinel/config/knowledge_ladder.json",
+      "size": 2577,
+      "sha256": "ada67d2d6d922efe2716d5998b90cc7a8e7b3f185025311e62757f8a86d8ee81"
+    },
+    {
+      "path": "modules/micro-sentinel/config/learning_budget.json",
+      "size": 1298,
+      "sha256": "28d0ace0ee716be7bfc777e466f9fb13233bf3609cd4633a2b9290dd2ef554d1"
+    },
+    {
+      "path": "modules/micro-sentinel/independent-reports/2026-09-05.json",
+      "size": 362,
+      "sha256": "2d9915ac770b1df8df2c7ad80d54217c8837ed6d0901c91f2e9f6d73046551ac"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/behavioral_observer_completion.json",
+      "size": 2239,
+      "sha256": "549912675708fe1f30a6891adf4bd1b9303079e060bde38a1e49275d4ae09dd7"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/cognitive_seed.json",
+      "size": 5353,
+      "sha256": "399733349b9c58eb6283aa96229035d1561b0d74bddc11670358c10ff4d6017f"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/crowdsec_curriculum.json",
+      "size": 1549,
+      "sha256": "0a2faf5ea571c2534b37f288e4a5b20d15891299189f52b0a47a58c4c608f19a"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ddos_foundation.json",
+      "size": 2404,
+      "sha256": "a156672c749fe00912ea0d2fc06ded867cd83cc482fa97bf19ae617c07ece389"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/foundation.json",
+      "size": 4330,
+      "sha256": "42ae1c8775f6df930f268782a2eafa3edadef91a5063607dd9befcb558d78d64"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/identity.json",
+      "size": 1938,
+      "sha256": "8fd7f7e8106a6853057a6f8ba3b4c2d33a7fa912bc9fe0ca02ac489e220b4c51"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/01_time_rhythm.json",
+      "size": 740,
+      "sha256": "73b86a62daf0b814b70a4cfb43c1618790be4ac655ddfd9ce85b2cae71a78554"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/02_state_change.json",
+      "size": 602,
+      "sha256": "d1d7bbee45c57c4672158830b9912897474df8ba9c0e7478d2126efe8c06bf8b"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/03_service_baselines.json",
+      "size": 709,
+      "sha256": "03d76014103713f1873354d8feb343b2808cd2feb2cd1815f65cac5a84670622"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/04_failure_domains.json",
+      "size": 1782,
+      "sha256": "e597b99abe15685aa24828cfee3cd9cb129868cb93ee6aa078fdb2b6e3970197"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/05_identity_boundaries.json",
+      "size": 655,
+      "sha256": "0ed990f56080333ba3e519626c3b32befa6b024afa46ca739a7ce2b4f94fb79a"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/06_sequence.json",
+      "size": 688,
+      "sha256": "6d0d18b1d918eb0f62e2fbd2bbae115b84fd5119d848c0c91cd2e529a11ece2a"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/07_recon_grammar.json",
+      "size": 727,
+      "sha256": "698d23461a554d4acf866c219fa7c1c9bf23a916807008d131b5db4e5e3900e7"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/08_auth_abuse.json",
+      "size": 752,
+      "sha256": "bb0c2ae86c0e7a74d49f50403845b8184c40124f72e960e0cb07479c8905c2ba"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/09_distributed_coordination.json",
+      "size": 755,
+      "sha256": "e05524b10eb6c9cd21f447085a7c049381211657cb1e97288771f42b8f5425e3"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/10_availability.json",
+      "size": 800,
+      "sha256": "e18c20d9b21b9fa4ad48016216d1adeeffb02678aea10634711531a6fcedbc40"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/11_cross_layer.json",
+      "size": 803,
+      "sha256": "4014217b7c04e1b07e259e75b97e63c19214671df67b7d509bed2b1d69126d43"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/12_adversarial_ambiguity.json",
+      "size": 750,
+      "sha256": "79a53afc8c8000e4c0945e438d3a441da0d8ef420f73a4e32410b5020effa9d5"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/13_calibration.json",
+      "size": 846,
+      "sha256": "ad8dcda87dd9af1c73b17638f550cd535bea011d22067085191e43002a7cc665"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/ladder/14_security_synthesis.json",
+      "size": 1083,
+      "sha256": "f0d59cae8f94160237a2ffc34ecf6cd721d57b4a21fc28945c5adeac46f442e3"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/learning_method.json",
+      "size": 1278,
+      "sha256": "5fb8a80848ee25379c0d642fe363de155a9a0d1b2a8f5431ea125c916e563bb9"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/network_foundation.json",
+      "size": 1800,
+      "sha256": "31df48de44f9904449c7d95132b503fa4016440fd3820c0bc6eccdc261ef1604"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/request_semantics.json",
+      "size": 1197,
+      "sha256": "b9adb6cc61ebb3009b700dd5bc01dfc726c87a94aff7e6bef20f83f6a8d2eb1c"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/requested_learning_policy.json",
+      "size": 1001,
+      "sha256": "df84c2f6c3cee028dac1f83dbb4c151d43757042b89147538053d0a379df04ae"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/security_ops_core.json",
+      "size": 1261,
+      "sha256": "3d666ac1c1354a36221d6a42a3947bd775953cb0f0ab6f91d7d5f8a0fc482095"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/self_review_template.json",
+      "size": 1631,
+      "sha256": "75a52dc1945484df139dcdd4b6572d6b7ec1430d4704ca654747f4a00d55a9a5"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/sysops_core.json",
+      "size": 1509,
+      "sha256": "3c9ccfa66993b8bfb46d6cecdd2342678a02db892d56bb518a3c2d17b3d2696b"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/sysops_reasoning.json",
+      "size": 1643,
+      "sha256": "472635947e9f35678c2ffc77f84e36ddaeca0f430c4c6d8b3e31fa3affab2ade"
+    },
+    {
+      "path": "modules/micro-sentinel/knowledge/threat_reconnaissance.json",
+      "size": 4352,
+      "sha256": "1bb60f507228eb287d9425d96ab92f0c4b0c16a2b08f11da189b5127d1f387b3"
+    },
+    {
+      "path": "modules/micro-sentinel/micro-sentinel.service",
+      "size": 400,
+      "sha256": "ee23d6d9547e6f8dc6a581503630e56693fa912cfa1a49f45a82bae2724227f5"
+    },
+    {
+      "path": "modules/micro-sentinel/micro-sentinel.timer",
+      "size": 162,
+      "sha256": "a78916f329f85fa4d7d15f5294162f228935ede8788e28d5157308aa239c9f94"
+    },
+    {
+      "path": "modules/micro-sentinel/self-reports/2026-09-05.json",
+      "size": 7636,
+      "sha256": "6e60c20618326517736080cf52e31a2d91471ee54ff9a5192f64fdc726d98697"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_crowdsec_reference.py",
+      "size": 990,
+      "sha256": "e715f87f58dce0037e3b71b7793284c99909eebb2e0a20d71affff152d2bd35f"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_peer_dialogue.py",
+      "size": 1365,
+      "sha256": "1e5f29f006c29b7a87552cd39484411f1ad904688bdc0ea340116080f8a63198"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_recon_recognition.py",
+      "size": 1470,
+      "sha256": "b0c6fb8be423f5a4fbdc22751264418d8cc3adc092b360f2a44f5613193d2c71"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_request_understanding.py",
+      "size": 933,
+      "sha256": "1bd9bb95c6c0e513665a26dfde29cc72def129adf51c30cbcef044a9faa00cc2"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_requested_learning.py",
+      "size": 870,
+      "sha256": "d3287d679f43a3d7fd3d773a286143b0506a3231b3793801d5a2fa88f2fabd22"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_self_review_freedom.py",
+      "size": 1406,
+      "sha256": "8c5faec0940c06f9f7660dd4b1b6d810ac0479c388cf5029f58c91da9d7d4283"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_sysops_regression.py",
+      "size": 1172,
+      "sha256": "9b8114ae01f2d6e026ec3895743686f9ddcadbc92c174a4661bffa2276825705"
+    },
+    {
+      "path": "modules/micro-sentinel/tests/test_v2.py",
+      "size": 891,
+      "sha256": "909794431e8088bf1395d5c710d9424937d5ffdf279fcabc681f117d48feacca"
+    },
+    {
+      "path": "modules/sentinel-decision/README.md",
+      "size": 1359,
+      "sha256": "b9823bdedb866dbc608df9a8ac756d5d28dc551c4bfb052a5e8bf85f0c15d132"
+    },
+    {
+      "path": "modules/sentinel-decision/docs/SENTINEL_AUTONOMOUS_DECISION_HANDOFF_2026-10-13.md",
+      "size": 8642,
+      "sha256": "2192c4819fc4a71f5a8806752ba51064ff90fcbe4b3b623e32b20c3f0d3e7f60"
+    },
+    {
+      "path": "modules/sentinel-decision/docs/SENTINEL_AUTONOMOUS_DECISION_OPS_HANDOFF_2026-10-13.md",
+      "size": 9639,
+      "sha256": "d994dfb46e4605b735167e4b12a554b8fabd3f270c82df8cf61f8383ad44ec83"
+    },
+    {
+      "path": "modules/sentinel-decision/docs/SENTINEL_EVIDENCE_AUTONOMY_P1_2026-10-13.md",
+      "size": 8287,
+      "sha256": "dfa0c81fb1203a27f66ea75fca1cb9c63ec6080827652ed33fcae88d41e24556"
+    },
+    {
+      "path": "modules/sentinel-decision/guardian-reports/collect_evidence.py",
+      "size": 8143,
+      "sha256": "47e5c4528555f48e5cd860d4382c108bbfb1be18a42197bd5848040b73f62f37"
+    },
+    {
+      "path": "modules/sentinel-decision/guardian-reports/deployed_component_evidence.py",
+      "size": 6044,
+      "sha256": "375127578a10514442f2eecf2f9c8a352576ff875a003474f0a21e26916c3e42"
+    },
+    {
+      "path": "modules/sentinel-decision/guardian-reports/reporter.py",
+      "size": 13825,
+      "sha256": "319e9485b4c2b22e536aa8c4becaa7224cae4d5fab1d7dedda4635cb530e7325"
+    },
+    {
+      "path": "modules/sentinel-decision/guardian-reports/run_monitor.py",
+      "size": 977,
+      "sha256": "57aba2385ed17967582772004d89a05f9e9042b9475d9f43df99df2feffbd805"
+    },
+    {
+      "path": "modules/sentinel-decision/guardian-reports/test_decision_notifications.py",
+      "size": 2405,
+      "sha256": "9e2b55aefd1545f855bfed7f3a67630c750cfae73e167afe572a12952d350edf"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/decision_engine.py",
+      "size": 13087,
+      "sha256": "1db695ddd7ff80062a86f3b7ee7bf744ae6c35096172864e5a82feeb0bbc16af"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/guardian_reasoner.py",
+      "size": 8801,
+      "sha256": "293c0baf1b5991d790af20b3f44f71c5e9b8509d40da0956d6e3fc11a6002f3d"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/guardian_temporal_shadow.py",
+      "size": 7220,
+      "sha256": "f9406ab771aa657abe79042ea6898f61f0c2eb240c9492637c38e53b3645bf62"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/learning_loop.py",
+      "size": 7837,
+      "sha256": "a646624917cf782d9f277ad81a3eaf8f089707aa20ae7e31b6e40d400af5428a"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/migrate_observation_time_index.py",
+      "size": 3405,
+      "sha256": "b2f1012eaf844464bedc792af97adbaa74727c03e012dd54e9216b7549e0e45c"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/run_shadow_cycle.py",
+      "size": 4430,
+      "sha256": "132886629a2d894023893c7d88d72e370b15d9683e8eddde093b84c3b6ab6e22"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/shadow_review.py",
+      "size": 11203,
+      "sha256": "c0567b225c9852c0e06b01868b192710eb3a8017bf61c31af6f97f37081840be"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/test_decision_engine.py",
+      "size": 6603,
+      "sha256": "b0f8eb2c914f221cff5da62ab4230d902334e3aa2293d2cb94ea11945839faf5"
+    },
+    {
+      "path": "modules/sentinel-decision/site-guardian/test_learning_loop.py",
+      "size": 5787,
+      "sha256": "16e8c7666521f47a203ff923008e508d7a443c1bcdbf22d116ee9b357207e2f2"
+    },
+    {
+      "path": "modules/sentinel-decision/systemd/sentinel-deployed-component-evidence.service",
+      "size": 824,
+      "sha256": "ec3bf2fd385c5c3e3da89d9e9689157d543e8ee3a101bfd5a1db0ea35244372d"
+    },
+    {
+      "path": "modules/sentinel-decision/systemd/sentinel-deployed-component-evidence.timer",
+      "size": 220,
+      "sha256": "9351a1940a73898ed96b472d7944859c4e6d9fcbec0910720fab028515d8c0d8"
+    },
+    {
+      "path": "modules/sentinel-decision/systemd/sentinel-guardian-shadow.service",
+      "size": 851,
+      "sha256": "ecb431ae8bc8ddbf12c49f3a5e32a97083482900985988ee0ff0877f56f0a498"
+    },
+    {
+      "path": "modules/sentinel-decision/systemd/sentinel-guardian-shadow.timer",
+      "size": 240,
+      "sha256": "100ca3d420664a6b5cb5da807c8c876233c0cae7837ffc9934ec357dcaa9afe6"
+    },
+    {
+      "path": "modules/sentinel-decision/threat-intel/article_reader.py",
+      "size": 5264,
+      "sha256": "3860d907ead8ccaf3aceec8576f3fda2f15099d56a61224d0743810dbc6337cb"
+    },
+    {
+      "path": "modules/sentinel-decision/threat-intel/bridge.py",
+      "size": 4247,
+      "sha256": "34314b5b5e62d28d49c32aea2d612e762846cd32b39c10d9c15ee7f93f99f19f"
+    },
+    {
+      "path": "modules/sentinel-decision/threat-intel/correlate.py",
+      "size": 7750,
+      "sha256": "c48939db76a869901f4dfe88a8445670b46ea89c2b3a52a5d1ac7fd30ed6405f"
+    },
+    {
+      "path": "modules/sentinel-decision/threat-intel/intake.py",
+      "size": 14030,
+      "sha256": "85a2b2742b8ac2e74da968eea7aa21a7137d5fb2cc9cec2539562d5ab79dcb2a"
+    },
+    {
+      "path": "modules/sentinel-decision/threat-intel/run_cycle.py",
+      "size": 1339,
+      "sha256": "ad584431c260ff827a2b3904d6b9fb246d180f805759ba6955012d46c68c315b"
+    },
+    {
+      "path": "modules/site-guardian/README.md",
+      "size": 4229,
+      "sha256": "e6615b3420c92abc4fcdde2d52cef5397d327e986b2b62f9a6a0908536b04c61"
+    },
+    {
+      "path": "modules/site-guardian/TRAINING_S1_HANDOFF_2026-10-08.md",
+      "size": 7332,
+      "sha256": "4fd023435ed804a9b488c56ad9ac3d8872aa9ad95682320a9998f9a5a8c273f0"
+    },
+    {
+      "path": "modules/site-guardian/build_guardian_curriculum.py",
+      "size": 8554,
+      "sha256": "e13f7cddca6908595d0182cc68fd46364e4c70c8f849c9d36256ac8858935000"
+    },
+    {
+      "path": "modules/site-guardian/cutover_monitor.py",
+      "size": 6285,
+      "sha256": "e457cd31708028f6a1ab85a6878b9c532f31dd0d2a497f1a0b7633aa623fd5a3"
+    },
+    {
+      "path": "modules/site-guardian/cve_kev_curator.py",
+      "size": 5301,
+      "sha256": "d1c531f5c8d29b2736dfc043b53d37be4436ea8548b8c639ab1f470014eb3f32"
+    },
+    {
+      "path": "modules/site-guardian/decision_engine.py",
+      "size": 13097,
+      "sha256": "dc07dcc8e03d5aafc9655b0d18143d43a723f55696dea91120e12131beacf3e3"
+    },
+    {
+      "path": "modules/site-guardian/expand_owner_approved_capacity.py",
+      "size": 4537,
+      "sha256": "9af047f0cb62a6f70e492936438214dd9cdf6b4c78ca1051f9e16603c2b06866"
+    },
+    {
+      "path": "modules/site-guardian/guardian_reasoner.py",
+      "size": 9044,
+      "sha256": "893c76dee0e57e18c56c203480a3c4673f71f783042278786699a3e29ccc6456"
+    },
+    {
+      "path": "modules/site-guardian/guardian_temporal_shadow.py",
+      "size": 7220,
+      "sha256": "f9406ab771aa657abe79042ea6898f61f0c2eb240c9492637c38e53b3645bf62"
+    },
+    {
+      "path": "modules/site-guardian/learning_loop.py",
+      "size": 7858,
+      "sha256": "d44e0596f73ef2ee50fc31325c55f6b52c43f01d20d7cf72dd1b43ba611eb63a"
+    },
+    {
+      "path": "modules/site-guardian/migrate_observation_time_index.py",
+      "size": 3345,
+      "sha256": "370be7484b7944829966f5ab91efd2df73205eb83d7c7ff9ac89875e004f1321"
+    },
+    {
+      "path": "modules/site-guardian/run_shadow_cycle.py",
+      "size": 4440,
+      "sha256": "f9b4f6196a149b1cfa778899630bc3ea00e986738b6cf407aa201122d1ffec8b"
+    },
+    {
+      "path": "modules/site-guardian/shadow_review.py",
+      "size": 11712,
+      "sha256": "e14759f5d20b629cd5cb64e9e34cc1ac3035a99e8d1bc1370983b0a58be1baa7"
+    },
+    {
+      "path": "modules/site-guardian/systemd/sentinel-guardian-shadow.service",
+      "size": 851,
+      "sha256": "ecb431ae8bc8ddbf12c49f3a5e32a97083482900985988ee0ff0877f56f0a498"
+    },
+    {
+      "path": "modules/site-guardian/systemd/sentinel-guardian-shadow.timer",
+      "size": 240,
+      "sha256": "100ca3d420664a6b5cb5da807c8c876233c0cae7837ffc9934ec357dcaa9afe6"
+    },
+    {
+      "path": "modules/site-guardian/test_cve_kev_s1.py",
+      "size": 1656,
+      "sha256": "ebbf40c06a46bb38dd2a029e61d456d0b45eb8dd72ff1cc60aff8d594ae3ec22"
+    },
+    {
+      "path": "modules/site-guardian/test_decision_engine.py",
+      "size": 6643,
+      "sha256": "30111bad0ac28019b82444c391035b0ba3032aadedccd36b1b9ba603c9ab0e05"
+    },
+    {
+      "path": "modules/site-guardian/test_guardian_reasoner_s1.py",
+      "size": 7404,
+      "sha256": "02f33a6489462357058972115b9bcfc67d664a3664cef441438ab4a07e2af102"
+    },
+    {
+      "path": "modules/site-guardian/test_guardian_temporal_s1.py",
+      "size": 3305,
+      "sha256": "97cb9235020059c59d9b89285ed64d6d42d2a2f20c4e13552c56b9feec57f863"
+    },
+    {
+      "path": "modules/site-guardian/test_learning_loop.py",
+      "size": 5827,
+      "sha256": "d9cb20196617aad28c43a3b4959a5c409cf7b57b8df441448ec27559f368692a"
+    },
+    {
+      "path": "modules/site-guardian/test_shadow_review.py",
+      "size": 4688,
+      "sha256": "31923ffd4964b81caece65e982a97d9a5cd89030c100126c84facbd80cf52f5f"
+    },
+    {
+      "path": "modules/threat-intel/THREAT_INTELLIGENCE_HANDOFF_2026-10-08.md",
+      "size": 9999,
+      "sha256": "919d8f4f9f91a16b76f60b3b1c1cba61ecbb78145eeeef59054b2d86f55a54dc"
+    },
+    {
+      "path": "modules/threat-intel/article_reader.py",
+      "size": 5264,
+      "sha256": "3860d907ead8ccaf3aceec8576f3fda2f15099d56a61224d0743810dbc6337cb"
+    },
+    {
+      "path": "modules/threat-intel/bridge.py",
+      "size": 4219,
+      "sha256": "15b03a3db02eca1aa7d08f8d62750d52df5bf754abbe4d003fa52def53b4b6c6"
+    },
+    {
+      "path": "modules/threat-intel/correlate.py",
+      "size": 7819,
+      "sha256": "b5d08db06c71b73fad4db3f5f64bfe37c9140c46955d0ae6418f6bc3a34ae446"
+    },
+    {
+      "path": "modules/threat-intel/intake.py",
+      "size": 14030,
+      "sha256": "85a2b2742b8ac2e74da968eea7aa21a7137d5fb2cc9cec2539562d5ab79dcb2a"
+    },
+    {
+      "path": "modules/threat-intel/run_cycle.py",
+      "size": 1339,
+      "sha256": "ad584431c260ff827a2b3904d6b9fb246d180f805759ba6955012d46c68c315b"
+    },
+    {
+      "path": "modules/threat-intel/systemd/sentinel-threat-intel.service",
+      "size": 866,
+      "sha256": "dea6528ad9f0f0ade10c525277bd32f4c09ed1d8fd924ba9c50397e0783d5e85"
+    },
+    {
+      "path": "modules/threat-intel/systemd/sentinel-threat-intel.timer",
+      "size": 255,
+      "sha256": "3dce977d4318566d86f0839a753bc5d1f50acff9e3f5ca252a268211757157d4"
+    },
+    {
+      "path": "modules/threat-intel/test_intel_s1.py",
+      "size": 3490,
+      "sha256": "f527461e25cbc0b50f679e42622eb7643c8dc9eb4b78ffa8d8390f25a54548cf"
+    },
+    {
+      "path": "workflows/MSentinel20260905.json",
+      "size": 3410,
+      "sha256": "1613a4a48cf3ba99fbf8460e280e9548c16ef544f643dc898ef77c8f11b5d01d"
+    },
+    {
+      "path": "workflows/MSentinelAlerts20260905.json",
+      "size": 2780,
+      "sha256": "aaaafbb170a31b2d5574d247352efe0fbad9a99107e1f738e9cfccf977e3f30b"
+    },
+    {
+      "path": "workflows/MSentinelBAlerts20260905.json",
+      "size": 2838,
+      "sha256": "48efb31693293ef23e6a5a1de715a34a8b2931bc667d8b1fd5484334cea5e2d0"
+    },
+    {
+      "path": "workflows/MSentinelDailyReview20260906.json",
+      "size": 2911,
+      "sha256": "ef158517dcfbf8b36962d876e4d08cec04c94b7f60a07dbb726baafbea8aac2c"
+    },
+    {
+      "path": "workflows/SGGuardianDaily20261008.json",
+      "size": 1309,
+      "sha256": "bf2fb8581a3ce3ad9aadb38999bffac3caff13cfc7e9ee2f839fe9bc2a74f32a"
+    },
+    {
+      "path": "workflows/SGGuardianQueue20261008.json",
+      "size": 3338,
+      "sha256": "7ba17aa32c22cb8c8e797231b6b8dcf1a5b922954a7956e706688d4b62968353"
+    },
+    {
+      "path": "workflows/SGGuardianWeekly20261008.json",
+      "size": 1328,
+      "sha256": "183cbca97921bca34c9d9c355fb186e60ee1e962bab29ae24f4d1e8405c0ade6"
+    }
+  ]
+}

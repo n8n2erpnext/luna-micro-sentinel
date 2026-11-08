@@ -1,0 +1,44 @@
+{
+  "version": "2026-09-05.1",
+  "status": "ACTIVE_GOVERNED_REFERENCE_CURRICULUM",
+  "authority": "REFERENCE_CORPUS_NOT_GROUND_TRUTH",
+  "source": "local CrowdSec scenarios and collections",
+  "activation": "governed_reference_active",
+  "principles": [
+    "Do not ingest CrowdSec decisions as truth labels.",
+    "Learn behavioral mechanisms and evidence structures, not permanent source identity.",
+    "Tainted or locally modified scenarios require explicit review.",
+    "Replay candidate concepts against sanitized local evidence before promotion.",
+    "CrowdSec disagreement must remain visible evidence, not be silently resolved.",
+    "No curriculum can increase Sentinel enforcement authority."
+  ],
+  "promotion_path": [
+    "scenario inventory",
+    "mechanism extraction",
+    "candidate security concept",
+    "offline replay",
+    "independent evaluation",
+    "human governed promotion"
+  ],
+  "activated_on": "2026-09-19",
+  "activated_by": "human_owner_explicit_request",
+  "reviewed_inventory": {
+    "crowdsec_version": "v1.7.8-63227459",
+    "scenario_count": 53,
+    "scenario_families": {
+      "cve_or_exploit": 29,
+      "http_behavior": 16,
+      "ssh": 6,
+      "other": 2
+    },
+    "collections": 5,
+    "tainted_scenarios": [
+      "crowdsecurity/http-generic-bf"
+    ],
+    "tainted_collections": [
+      "crowdsecurity/base-http-scenarios"
+    ],
+    "acquisition": "/var/log/netbird/access.log via local/netbird-proxy parser"
+  },
+  "lesson": "knowledge/lessons/crowdsec/2026-09-19_local_scenario_mechanisms.json"
+}

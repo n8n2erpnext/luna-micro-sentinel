@@ -1,0 +1,16 @@
+{
+  "version": "2026-09-05.1",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "classes": ["normal_like", "unusual_uncertain", "suspicious_pattern"],
+  "principles": [
+    "Classify requests in host+method+path+status+sequence+rate context.",
+    "A single 401, 403, 404, 5xx, novel IP or novel path is not hostile evidence by itself.",
+    "GET and HEAD to established public routes are usually normal-like when behavior matches baseline.",
+    "POST, PUT, PATCH and DELETE are context-dependent and must not be treated as suspicious merely because they mutate state.",
+    "Known recurring application/API/static routes can become scoped normal baselines from repeated evidence.",
+    "Secret, backup, framework-admin and configuration probes contribute suspicious evidence when combined with breadth, repetition or correlation.",
+    "Distributed low-rate activity may form a campaign hypothesis only from behavioral correlation, never subnet membership alone.",
+    "Unknown means uncertain; uncertainty must not be silently converted into normal or malicious."
+  ],
+  "privacy": "Persist normalized path without query string; never learn request bodies, credentials, tokens or query values."
+}

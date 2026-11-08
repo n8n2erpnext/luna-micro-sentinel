@@ -1,0 +1,134 @@
+{
+  "name": "Sentinel Guardian Verified Telegram Queue",
+  "originalWorkflowId": "SGGuardianQueue20261008",
+  "active": false,
+  "sanitizedExport": true,
+  "notes": "Template only. Credentials, host addresses, webhook IDs and operator identifiers deliberately removed.",
+  "nodes": [
+    {
+      "id": "guardian-q-schedule",
+      "name": "Every minute",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        180,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "guardian-q-claim",
+      "name": "Claim guardian report",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        390,
+        300
+      ],
+      "parameters": {
+        "authentication": "privateKey",
+        "command": "=/usr/bin/python3 /home/ubuntu/services/sentinel-guardian-reports/reporter.py claim"
+      }
+    },
+    {
+      "id": "guardian-q-parse",
+      "name": "Parse queued report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        600,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const raw = $input.first()?.json?.stdout ?? \"\";let x; try { x=JSON.parse(String(raw).trim()); } catch(e){return [];}if (!Number.isInteger(x.id) || x.id<=0 || typeof x.text!==\"string\" || !x.text) return [];return [{json:{id:x.id,text:x.text,kind:x.kind}}];"
+      }
+    },
+    {
+      "id": "guardian-q-send",
+      "name": "Send guardian Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        830,
+        300
+      ],
+      "parameters": {
+        "chatId": "CONFIGURE_IN_N8N",
+        "text": "={{ $json.text }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      }
+    },
+    {
+      "id": "guardian-q-ack",
+      "name": "Ack sent Telegram",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "parameters": {
+        "authentication": "privateKey",
+        "command": "={{ \"/usr/bin/python3 /home/ubuntu/services/sentinel-guardian-reports/reporter.py ack --id \" + $(\"Parse queued report\").first().json.id + \" --telegram-message-id \" + ($json.message_id ?? $json.result?.message_id ?? $json.data?.message_id ?? 0) }}"
+      }
+    }
+  ],
+  "connections": {
+    "Every minute": {
+      "main": [
+        [
+          {
+            "node": "Claim guardian report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claim guardian report": {
+      "main": [
+        [
+          {
+            "node": "Parse queued report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse queued report": {
+      "main": [
+        [
+          {
+            "node": "Send guardian Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send guardian Telegram": {
+      "main": [
+        [
+          {
+            "node": "Ack sent Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

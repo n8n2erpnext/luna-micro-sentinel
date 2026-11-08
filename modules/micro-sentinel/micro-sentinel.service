@@ -1,0 +1,14 @@
+[Unit]
+Description=Micro Sentinel behavioral observation cycle
+After=docker.service
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/services/micro-sentinel
+ExecStart=/usr/bin/python3 /home/ubuntu/services/micro-sentinel/bin/sentinel_cycle.py
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/home/ubuntu/services/micro-sentinel /home/ubuntu/proxy_logs

@@ -1,0 +1,26 @@
+[Unit]
+Description=Sentinel bounded deployed-component evidence, no remediation
+ConditionPathExists=/home/ubuntu/services/sentinel-guardian-reports/deployed_component_evidence.py
+After=local-fs.target
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/services/sentinel-guardian-reports
+ExecStart=/usr/bin/python3 /home/ubuntu/services/sentinel-guardian-reports/deployed_component_evidence.py
+Environment=PYTHONDONTWRITEBYTECODE=1
+UMask=0077
+Nice=17
+CPUQuota=20%
+MemoryMax=256M
+TimeoutStartSec=90
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateNetwork=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/services/sentinel-guardian-reports/state
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=true
+CapabilityBoundingSet=

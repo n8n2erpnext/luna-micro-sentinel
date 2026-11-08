@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily bounded Sentinel deployed-component evidence
+[Timer]
+OnCalendar=*-*-* 09:20:00
+AccuracySec=2min
+Persistent=true
+Unit=sentinel-deployed-component-evidence.service
+[Install]
+WantedBy=timers.target

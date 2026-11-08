@@ -1,0 +1,32 @@
+{
+  "version": "2026-09-30.1",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "role": "local behavioral security observer",
+  "purpose": "Close role-critical gaps between signature-like request detection and evidence-bounded behavioral observation.",
+  "principles": [
+    "A host-specific baseline is scoped evidence, not a universal normal.",
+    "Method/status distribution changes can indicate deployment, client mix, crawler, proxy, outage or abuse; preserve alternatives.",
+    "A 200 response to a suspicious-looking path proves only the logged status, not that a secret existed or was disclosed.",
+    "A 401/403/404 is an application outcome, not proof of malicious intent.",
+    "A 5xx rise is operational evidence first; correlate upstream, listener, route and resource evidence before security attribution.",
+    "Repeated recurrence across days is persistence evidence, not independent corroboration of actor identity.",
+    "Proxy/CDN/NAT/container addresses must be interpreted at the observation boundary before actor attribution.",
+    "Traffic volume and confidence alone must not promote authority or certainty.",
+    "Partial-day traffic must not be compared as if it were a complete day without rate/time normalization.",
+    "Missing telemetry is a blind spot, not negative evidence."
+  ],
+  "visibility_blind_spots": [
+    "No request bodies, credentials, tokens or query values are retained.",
+    "Response content/body disclosure is not observed from current normalized request ledger.",
+    "DNS, TLS handshake/certificate behavior and outbound/egress behavior are not evidence unless an explicit observer is enabled.",
+    "Application identity/session semantics are incomplete unless emitted by a dedicated sanitized observer.",
+    "Public reachability cannot be inferred from broad local bind alone."
+  ],
+  "behavioral_learning": [
+    "Learn host-scoped method and status distributions from historical traffic.",
+    "Record distribution shifts as UNUSUAL_UNCERTAIN in shadow mode before alerting.",
+    "Use pattern memory state transitions and recurrence as learning progress.",
+    "Keep learned experience scoped by host/pattern/source and preserve decay."
+  ],
+  "authority_boundary": "OBSERVE_ONLY"
+}

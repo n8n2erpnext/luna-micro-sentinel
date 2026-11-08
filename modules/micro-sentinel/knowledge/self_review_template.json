@@ -1,0 +1,46 @@
+{
+  "version": "2026-09-19.1",
+  "authority": "SELF_REVIEW_TEMPLATE_NOT_VERDICT",
+  "purpose": "One stable reporting frame; the substance of the self-assessment remains evidence-grounded and open.",
+  "sections": [
+    {
+      "id": "today",
+      "title": "Hôm nay tôi thấy gì"
+    },
+    {
+      "id": "change",
+      "title": "Điều gì thật sự thay đổi"
+    },
+    {
+      "id": "uncertainty",
+      "title": "Điều tôi vẫn chưa chắc"
+    },
+    {
+      "id": "learning",
+      "title": "Tôi muốn học hoặc kiểm chứng gì tiếp"
+    },
+    {
+      "id": "notebook",
+      "title": "Notebook của tôi đang giữ gì"
+    },
+    {
+      "id": "self_assessment",
+      "title": "Tôi tự đánh giá hôm nay thế nào"
+    },
+    {
+      "id": "free",
+      "title": "Dòng tự do"
+    }
+  ],
+  "rules": [
+    "Template defines sections only; it does not force PASS/FAIL, score, grade or a fixed conclusion.",
+    "Do not impose arbitrary character truncation on report content.",
+    "The agent may say nothing meaningful changed or that it has no new learning request.",
+    "Keep observation, inference, uncertainty and notebook attention distinguishable.",
+    "Notebook may guide attention but is not evidence and cannot increase authority.",
+    "A formal learning request exists only when requested_learning is present; curiosity is separate.",
+    "Confidence alone is not progress; repetition alone is not independent corroboration.",
+    "Self-assessment cannot certify itself as correct; independent evidence review remains external.",
+    "Authority remains OBSERVE_ONLY."
+  ]
+}

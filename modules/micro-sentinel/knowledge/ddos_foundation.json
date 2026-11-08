@@ -1,0 +1,32 @@
+{
+  "version": "2026-09-05.1",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "topic": "defensive availability-abuse understanding",
+  "classes": ["recon_scan", "application_flood", "distributed_flood", "resource_exhaustion", "flash_crowd_or_legitimate_burst"],
+  "principles": [
+    "A subnet scan seeks breadth or discovery; a flood primarily creates sustained load or resource pressure.",
+    "Many sources in one subnet do not by themselves establish DDoS.",
+    "High request volume does not by itself establish DDoS; legitimate bursts and retries exist.",
+    "DDoS hypotheses require correlated traffic pressure plus service-impact or resource-pressure evidence when available.",
+    "Recon can precede a flood, coexist with it, or be unrelated; keep the hypotheses separate.",
+    "A distributed low-rate scan is not a DDoS merely because many sources participate.",
+    "Server 5xx, timeout or latency alone is not attacker evidence; correlate cause and traffic behavior.",
+    "Normal popularity spikes may resemble floods; compare host, route, method, status, rate and historical baseline.",
+    "Evidence can support application-layer flood hypotheses without revealing request bodies or credentials.",
+    "Sentinel may alert on suspected availability abuse but remains OBSERVE_ONLY."
+  ],
+  "evidence_dimensions": {
+    "traffic": ["requests_per_window", "concurrency_if_available", "source_count", "source_dispersion", "route_concentration", "method_mix"],
+    "temporal": ["burstiness", "sustained_rate", "synchrony", "retry_cadence", "baseline_deviation"],
+    "service": ["latency_shift", "timeout_shift", "5xx_shift", "availability_change"],
+    "resource": ["cpu_pressure_if_available", "memory_pressure_if_available", "connection_pressure_if_available"],
+    "recon": ["unique_path_breadth", "sensitive_target_ratio", "technology_probe_sequence"]
+  },
+  "negative_knowledge": [
+    "Do not call a scan DDoS from path breadth alone.",
+    "Do not call legitimate authenticated application navigation a scan from route breadth alone.",
+    "Do not infer attacker identity from subnet, ASN, geography or user-agent alone.",
+    "Do not convert a DDoS hypothesis into an autonomous firewall action."
+  ],
+  "learning_goal": "Learn local normal load shape first, then distinguish discovery behavior from availability-pressure behavior with explicit supporting and conflicting evidence."
+}

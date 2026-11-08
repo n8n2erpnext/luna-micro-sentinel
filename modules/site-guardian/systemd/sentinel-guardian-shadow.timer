@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Light Sentinel Guardian read-only S1 shadow evaluation periodically
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=2min
+AccuracySec=10s
+Persistent=true
+Unit=sentinel-guardian-shadow.service
+
+[Install]
+WantedBy=timers.target

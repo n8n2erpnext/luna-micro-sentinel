@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily 09:10 Guardian partial SBOM/version snapshot
+
+[Timer]
+OnCalendar=*-*-* 09:10:00
+Persistent=true
+AccuracySec=1min
+Unit=sentinel-guardian-assets.service
+
+[Install]
+WantedBy=timers.target

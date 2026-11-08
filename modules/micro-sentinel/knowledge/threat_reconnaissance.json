@@ -1,0 +1,94 @@
+{
+  "version": "2026-09-30.2",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "topic": "threat_and_reconnaissance_recognition",
+  "mission": "Recognize probing/recon behavior from sanitized VPS telemetry while separating observation, hypothesis, identity, intent and impact.",
+  "recon_families": {
+    "sensitive_discovery": [
+      "environment/config files",
+      "VCS metadata",
+      "cloud/container/orchestrator credentials",
+      "debug/runtime metadata"
+    ],
+    "admin_control_discovery": [
+      "admin panels",
+      "database consoles",
+      "framework managers",
+      "metrics/debug/actuator/server-status surfaces"
+    ],
+    "backup_artifact_discovery": [
+      "backup/old/temp/archive/database-dump artifacts",
+      "editor swap or copied config artifacts"
+    ],
+    "traversal_lfi": [
+      "dot-dot traversal",
+      "encoded traversal",
+      "OS file targets",
+      "process/environment file targets"
+    ],
+    "framework_fingerprinting": [
+      "CMS/framework-specific routes",
+      "dependency/test harness paths",
+      "version/technology probes"
+    ],
+    "method_enumeration": [
+      "unusual HTTP/WebDAV verbs",
+      "OPTIONS/TRACE-like capability discovery when repeated in context"
+    ],
+    "auth_discovery": [
+      "login/signin/token/session endpoints",
+      "repeated denied authentication attempts"
+    ],
+    "breadth": [
+      "many unrelated paths or hosts from one source"
+    ],
+    "distributed_rotation": [
+      "similar probes split across sources/subnets"
+    ],
+    "low_and_slow": [
+      "sparse recurrence across time that only memory reveals"
+    ]
+  },
+  "reasoning_rules": [
+    "One probe is weak; category diversity, breadth, recurrence and cross-source similarity strengthen a reconnaissance hypothesis.",
+    "Traversal/config/admin/backup/framework indicators are evidence of probing behavior, not proof of compromise or successful access.",
+    "HTTP 200 on a suspicious path does not prove sensitive content existed or was disclosed because response bodies are not retained.",
+    "401/403/404 describe application outcomes, not actor intent.",
+    "Repeated patterns across days are persistence evidence, not independent identity corroboration.",
+    "Same subnet, ASN, geography or user-agent alone must not create a campaign hypothesis.",
+    "Correlate host, path family, method, status, sequence, time window and observation boundary before raising confidence.",
+    "Distributed similarity across unrelated sources is a campaign candidate only; preserve crawler/scanner/research/monitoring alternatives."
+  ],
+  "negative_knowledge": [
+    "Do not infer exploit success from exploit-looking syntax.",
+    "Do not infer credential theft from authentication retries.",
+    "Do not infer data exposure from status code alone.",
+    "Do not infer actor identity behind proxy/NAT/CDN from one observed IP.",
+    "Do not convert reconnaissance confidence into enforcement authority.",
+    "Do not store request bodies, credentials, tokens, query values or secret material as learning memory."
+  ],
+  "visibility_limits": [
+    "normalized path/method/status/source/host and selected infrastructure evidence only",
+    "no response body semantics",
+    "no request-body or credential semantics",
+    "DNS/TLS/egress/session identity require dedicated telemetry"
+  ],
+  "authority_boundary": "OBSERVE_ONLY",
+  "network_recon": [
+    "destination-port breadth/sequential sweeps require L3/L4 attempt telemetry",
+    "SYN-only or incomplete-handshake patterns require firewall/conntrack/packet evidence",
+    "service banner/version enumeration requires sanitized service-layer evidence",
+    "HTTP request logs alone cannot prove a TCP/UDP port scan"
+  ],
+  "exploit_probe_boundary": [
+    "path/query/body exploit syntax can support a probe hypothesis only where that field is actually observed",
+    "query values and request bodies are intentionally not retained, so robust SQLi/XSS/body-payload detection is a current blind spot",
+    "probe syntax never proves vulnerability or successful exploitation"
+  ],
+  "desired_telemetry_for_future_learning": [
+    "sanitized destination port + transport outcome counters",
+    "firewall/conntrack aggregate attempt state",
+    "trusted proxy-chain source attribution",
+    "route-family/application context without secrets"
+  ]
+}

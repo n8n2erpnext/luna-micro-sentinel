@@ -1,0 +1,20 @@
+[Unit]
+Description=Sentinel Guardian bounded software version evidence (read only)
+After=local-fs.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/services/sentinel-guardian-reports
+ExecStart=/usr/bin/python3 /home/ubuntu/services/sentinel-guardian-reports/asset_inventory.py
+UMask=0077
+Nice=17
+CPUQuota=20%
+MemoryMax=256M
+TimeoutStartSec=50
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/services/sentinel-guardian-reports/state
+RestrictSUIDSGID=true
+CapabilityBoundingSet=

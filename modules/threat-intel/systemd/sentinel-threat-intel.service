@@ -1,0 +1,27 @@
+[Unit]
+Description=Sentinel Public Threat Intelligence Intake - bounded and non-enforcing
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/home/ubuntu/services/sentinel-threat-intel/config.json
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/services/sentinel-threat-intel
+ExecStart=/usr/bin/python3 /home/ubuntu/services/sentinel-threat-intel/run_cycle.py
+Environment=PYTHONDONTWRITEBYTECODE=1
+UMask=0077
+Nice=15
+CPUQuota=30%
+MemoryMax=256M
+TimeoutStartSec=180
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/services/sentinel-threat-intel/state /home/ubuntu/services/sentinel-threat-intel/reports
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictSUIDSGID=true
+CapabilityBoundingSet=

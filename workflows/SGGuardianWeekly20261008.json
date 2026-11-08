@@ -1,0 +1,56 @@
+{
+  "name": "Sentinel Guardian Weekly Competency",
+  "originalWorkflowId": "SGGuardianWeekly20261008",
+  "active": false,
+  "sanitizedExport": true,
+  "notes": "Template only. Credentials, host addresses, webhook IDs and operator identifiers deliberately removed.",
+  "nodes": [
+    {
+      "id": "SGGuardianWeekly20261008-schedule",
+      "name": "Weekly Monday 09:40",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        200,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "40 9 * * 1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SGGuardianWeekly20261008-ssh",
+      "name": "Enqueue weekly guardian",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "parameters": {
+        "authentication": "privateKey",
+        "command": "=/usr/bin/python3 /home/ubuntu/services/sentinel-guardian-reports/reporter.py weekly"
+      }
+    }
+  ],
+  "connections": {
+    "Weekly Monday 09:40": {
+      "main": [
+        [
+          {
+            "node": "Enqueue weekly guardian",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

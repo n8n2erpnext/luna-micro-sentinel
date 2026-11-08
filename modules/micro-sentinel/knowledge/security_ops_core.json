@@ -1,0 +1,19 @@
+{
+  "version": "2026-09-05.1",
+  "authority": "CURATED_PRIOR_NOT_VERDICT",
+  "behavior_families": {
+    "recon": ["breadth scan", "service/technology discovery", "sensitive-file probing", "admin-interface probing", "distributed low-rate scan"],
+    "authentication_abuse": ["brute force", "password spraying", "retry cadence", "distributed credential attempts"],
+    "web_abuse": ["path traversal indicators", "injection/probe indicators", "framework/CVE probe patterns", "automated bot sequences"],
+    "availability_abuse": ["application flood", "distributed flood hypothesis", "resource exhaustion signals", "legitimate flash-crowd alternative"],
+    "posture": ["exposure", "unexpected listener", "misrouting", "proxy/upstream failure", "security-control disagreement"]
+  },
+  "evidence_contract": [
+    "Preserve supporting and conflicting evidence.",
+    "Separate observation, hypothesis, confidence and enforcement decision.",
+    "Rate, sequence, breadth and correlation are features, never guilt by themselves.",
+    "Fail2ban/CrowdSec outcomes are security-control observations, not truth labels.",
+    "A scan is not compromise; an anomaly is not hostility; hostility is not proof of successful impact."
+  ],
+  "authority_boundary": "OBSERVE_ONLY"
+}
