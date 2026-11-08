@@ -1,22 +1,8 @@
 {
   "generated": "2026-11-08",
-  "kind": "source-only snapshot",
+  "kind": "source-only sanitized snapshot",
+  "fileCount": 162,
   "files": [
-    {
-      "path": ".gitignore",
-      "size": 268,
-      "sha256": "5f6b2bd50d32e91585f17a03fb8554c03db3998310f7811ad6fdd8b3c700dccb"
-    },
-    {
-      "path": "README.md",
-      "size": 1781,
-      "sha256": "ef7b609abe1ee9877ed0b745c29713a79d2834d9cdd9e5550789737865077f2e"
-    },
-    {
-      "path": "docs/DECOMMISSION_HANDOFF.md",
-      "size": 1403,
-      "sha256": "4496b00cd66b3ddd4f0be6890ca5482ea91fcc6f634d8053b5009abca81e08d3"
-    },
     {
       "path": "modules/competition-reviews/2026-10-08-ENFORCEMENT-READINESS.md",
       "size": 14717,
@@ -114,8 +100,8 @@
     },
     {
       "path": "modules/luna-docs/README.md",
-      "size": 7216,
-      "sha256": "c17cd3e3ea3a834bc4290f87457dd6d96f688ea59c1eb1819dd575396e8d9399"
+      "size": 7210,
+      "sha256": "cd24676ad6bbc55f016254dc6c1a5990ae2a5eccd5767543200948ea7e88cc82"
     },
     {
       "path": "modules/luna-docs/SECURITY.md",
@@ -626,6 +612,21 @@
       "path": "modules/sentinel-decision/threat-intel/run_cycle.py",
       "size": 1339,
       "sha256": "ad584431c260ff827a2b3904d6b9fb246d180f805759ba6955012d46c68c315b"
+    },
+    {
+      "path": "modules/service-tools/build_sentinel_cognition.py",
+      "size": 6637,
+      "sha256": "9133232ec1d19071d9ba34208a4194979942d71e32a5fe190f9262fa82d1209e"
+    },
+    {
+      "path": "modules/service-tools/patch_sentinel_guard.py",
+      "size": 2625,
+      "sha256": "31d25e4ce6e223a2d1d1c61025ca21cadb1ed4de1d93eca5d10dd5e4e36d1f9c"
+    },
+    {
+      "path": "modules/service-tools/tune_sentinel_cognition.py",
+      "size": 7208,
+      "sha256": "fc145434b78a9d492c451ecf0b8d4e7b7f3549aa738750a18bd77eccad617412"
     },
     {
       "path": "modules/site-guardian/README.md",

@@ -1,0 +1,193 @@
+{
+  "completedAt": "2026-11-08T15:23:41.964456+00:00",
+  "sourceRepository": "https://github.com/n8n2erpnext/luna-micro-sentinel",
+  "publishedSourceCommit": "07db4435f7d9e1dbfe231f9c1c06193953d61613",
+  "n8nDeletedWorkflowCount": 7,
+  "n8nDeletedHistoricalExecutions": 9765,
+  "microSentinelTimerDisabled": true,
+  "removed": [
+    {
+      "path": "/home/ubuntu/services/micro-sentinel",
+      "type": "directory",
+      "diskBytesBefore": 3936636928
+    },
+    {
+      "path": "/home/ubuntu/services/sentinel-site-guardian",
+      "type": "directory",
+      "diskBytesBefore": 24236032
+    },
+    {
+      "path": "/home/ubuntu/services/sentinel-guardian-reports",
+      "type": "directory",
+      "diskBytesBefore": 716800
+    },
+    {
+      "path": "/home/ubuntu/services/sentinel-threat-intel",
+      "type": "directory",
+      "diskBytesBefore": 901120
+    },
+    {
+      "path": "/home/ubuntu/services/sentinel-competition-reviews",
+      "type": "directory",
+      "diskBytesBefore": 114688
+    },
+    {
+      "path": "/home/ubuntu/n8n2erpnext/light-sentinel-decision",
+      "type": "directory",
+      "diskBytesBefore": 819200
+    },
+    {
+      "path": "/home/ubuntu/n8n2erpnext/light-luna",
+      "type": "directory",
+      "diskBytesBefore": 2990080
+    },
+    {
+      "path": "/home/ubuntu/backups/sentinel-index-pre-2026-10-13",
+      "type": "directory",
+      "diskBytesBefore": 1209225216
+    },
+    {
+      "path": "/home/ubuntu/.cache/light-luna",
+      "type": "directory",
+      "diskBytesBefore": 2420736
+    },
+    {
+      "path": "/home/ubuntu/handoffs/sentinel-consolidation-20261030",
+      "type": "directory",
+      "diskBytesBefore": 45056
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_LUNA_ONLY_20261030_before",
+      "type": "directory",
+      "diskBytesBefore": 135168
+    },
+    {
+      "path": "/home/ubuntu/handoffs/luna-alert-timeline-fix-20261031",
+      "type": "directory",
+      "diskBytesBefore": 36864
+    },
+    {
+      "path": "/home/ubuntu/n8n/workflows/micro-sentinel.json",
+      "type": "file",
+      "bytesBefore": 4368
+    },
+    {
+      "path": "/home/ubuntu/backups/luna-telegram-wall-20261017-pre-fix.ts",
+      "type": "file",
+      "bytesBefore": 3796
+    },
+    {
+      "path": "/home/ubuntu/n8n2erpnext/light-luna-initial-main.bundle",
+      "type": "file",
+      "bytesBefore": 42250
+    },
+    {
+      "path": "/home/ubuntu/services/build_sentinel_cognition.py",
+      "type": "file",
+      "bytesBefore": 6637
+    },
+    {
+      "path": "/home/ubuntu/services/tune_sentinel_cognition.py",
+      "type": "file",
+      "bytesBefore": 7208
+    },
+    {
+      "path": "/home/ubuntu/services/patch_sentinel_guard.py",
+      "type": "file",
+      "bytesBefore": 2625
+    },
+    {
+      "path": "/home/ubuntu/services/sentinel-competition.json",
+      "type": "file",
+      "bytesBefore": 925
+    },
+    {
+      "path": "/home/ubuntu/handoffs/patch_luna_bot_menu_20261030.py",
+      "type": "file",
+      "bytesBefore": 10246
+    },
+    {
+      "path": "/home/ubuntu/handoffs/f2b-botctl-before-luna-menu-20261030.py",
+      "type": "file",
+      "bytesBefore": 22278
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_LUNA_ONLY_PATCH_20261030.py",
+      "type": "file",
+      "bytesBefore": 7073
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_AUTONOMOUS_DECISION_OPS_HANDOFF_2026-10-13.md",
+      "type": "file",
+      "bytesBefore": 9639
+    },
+    {
+      "path": "/home/ubuntu/handoffs/luna-reporter-before-crowdsec-20261031.py",
+      "type": "file",
+      "bytesBefore": 4706
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_AUTONOMOUS_DECISION_HANDOFF_2026-10-13.md",
+      "type": "file",
+      "bytesBefore": 8642
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_LUNA_SINGLE_COLLECTOR_72H_CUTOVER_20261030.md",
+      "type": "file",
+      "bytesBefore": 5981
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_ONLY_LUNA_REMOVAL_20261030.md",
+      "type": "file",
+      "bytesBefore": 2887
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_LUNA_DEFENSIVE_TELEGRAM_V2_20261030.md",
+      "type": "file",
+      "bytesBefore": 6593
+    },
+    {
+      "path": "/home/ubuntu/handoffs/sentinel-reporter-before-luna-v2-20261030.py",
+      "type": "file",
+      "bytesBefore": 13825
+    },
+    {
+      "path": "/home/ubuntu/handoffs/luna-sentinel-v2-before-notify-v2-20261030.py",
+      "type": "file",
+      "bytesBefore": 10706
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_EVIDENCE_AUTONOMY_P1_2026-10-13.md",
+      "type": "file",
+      "bytesBefore": 8291
+    },
+    {
+      "path": "/home/ubuntu/handoffs/LUNA_CROWDSEC_ALL_HOST_ALERT_BRIDGE_20261031.md",
+      "type": "file",
+      "bytesBefore": 4217
+    },
+    {
+      "path": "/home/ubuntu/handoffs/SENTINEL_LUNA_CROWDSEC_TIMING_RCA_20261031.md",
+      "type": "file",
+      "bytesBefore": 3662
+    }
+  ],
+  "diskFreeBeforeBytes": 17204592640,
+  "diskFreeAfterBytes": 22383087616,
+  "netFreedBytes": 5178494976,
+  "netFreedGiB": 4.823,
+  "retained": [
+    "/home/ubuntu/n8n2erpnext/luna-micro-sentinel",
+    "n8n service and other workflows",
+    "shared Fail2Ban/CrowdSec/NetBird runtime"
+  ],
+  "oldLunaDeployKeyPairRemoved": true,
+  "systemdUnitsRemainDueToReadOnlyRootFS": [
+    "/etc/systemd/system/micro-sentinel.service",
+    "/etc/systemd/system/micro-sentinel.timer"
+  ],
+  "systemdUnitStatus": "timer disabled and inactive, service not running; physical unit files on read-only root filesystem retained",
+  "n8nFinalWorkflowCount": 46,
+  "n8nHealth": "HTTP 200",
+  "finalGithubSourceCommitBeforeReport": "07db4435f7d9e1dbfe231f9c1c06193953d61613"
+}
